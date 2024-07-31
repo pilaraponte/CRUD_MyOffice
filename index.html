@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOffice</title>
+</head>
+<body>
+<header class="cabecalho">
+    <img class="img" src="Imagem/logo.png" width="200" height="80">
+    <div class="entrar" aria-labelledby="dropdownMenuButton">
+        <img src="Imagem/login.png" class="img_login" alt="Login Image" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" onclick="telaLogin()">Faça Login</a>
+            <a class="dropdown-item" onclick="telaCadastro()">Cadastre-se</a>
+            <a class="dropdown-item" onclick="telaApresentacao()">Sobre nós</a>
+        </div>        
+    </div>
+</header>
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" href="#sobre">Sobre</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#contatos">Contatos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#ferramentas">Ferramentas</a>
+    </li>
+</ul>
+
+<body> 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="carousel slide" id="carousel-427289">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-427289">
+					</li>8
+					<li data-slide-to="1" data-target="#carousel-427289" class="active">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-427289">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item">
+						<img class="d-block w-100" alt="Carousel Bootstrap First" src="imagem/1.jpg" width="1300" height="600"/>
+						<div class="carousel-caption">
+					
+						</div>
+					</div>
+					<div class="carousel-item active">
+						<img class="d-block w-100" alt="Carousel Bootstrap First" src="imagem/2.jpg" width="1300" height="600"/>
+						<div class="carousel-caption">
+							
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" alt="Carousel Bootstrap First" src="imagem/3.jpg" width="1300" height="600"/>
+						<div class="carousel-caption">
+						
+						</div>
+					</div>
+				</div> <a class="carousel-control-prev" href="#carousel-427289" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-427289" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+			</div> 
+		</div>
+	</div>
+</div>
+
+<!--Tela de apresentação-->
+
+<div class="container-apresentacao">
+	<section class="intro">
+	</section>
+	<section class="features">
+		<div class="feature"> 
+			<h2 id="ferramentas">Ferramentas</h2><br>
+			<h3>Busca Simples</h3>
+			<p>Explore uma vasta lista de salas disponíveis para aluguel de forma rápida e fácil.</p>
+		</div>
+		<div class="feature">
+			<h3>Cadastro de Salas</h3>
+			<p>Cadastre suas salas de forma gratuita e aumente suas chances de encontrar locatários.</p>
+		</div>
+		<div class="feature">
+			<h3>Filtros Avançados</h3>
+			<p>Utilize filtros avançados para refinar sua busca e encontrar exatamente o que você precisa.</p>
+		</div>
+	</section> 
+	<section class="features">
+		<div class="feature"> 
+			<h2>Sobre</h2>
+	</section> 
+	<header id="sobre" >
+		<h4>Quem somos?</h4>
+		<p class="sobre_p">Somos uma plataforma dedicada ao cadastro e aluguel de salas.<br> Proporcionamos uma solução integrada para proprietários e locatários interessados em espaços funcionais e bem localizados. <br> Com uma abordagem centrada na facilidade e eficiência, buscamos conectar oferta e demanda de maneira transparente e segura.</p>
+	<h4>O que fazemos?</h4>
+	<p class="sobre_p">Facilitamos o processo de cadastro e busca de salas para aluguel, oferecendo uma plataforma intuitiva e abrangente. <br> Nosso serviço permite que proprietários anunciem suas salas de maneira detalhada e atrativa,<br> enquanto potenciais locatários exploram opções variadas conforme suas necessidades específicas. <br>Com filtros avançados e ferramentas de busca poderosas,<br> ajudamos a simplificar a experiência de encontrar   e alugar salas ideais para diversos fins comerciais e institucionais.</p>
+	</header>
+	<section class="features">
+		<div class="feature"> 
+			<h2 id="contatos" >Contatos</h2>
+	</section>
+	<nav>
+		<a target="_blank" 
+		   href="https://wa.me"><img src="imagem/wtss.png" class="img_login" alt="Login Image" ></a>
+		   
+		<a target="_blank" 	
+		   href="https://www.linkedin.com"><img src="imagem/Linkedin.webp" class="img_login" alt="Login Image" ></a></a>
+		   <a target="_blank"
+		href="https://www.instagram.com"><img src="imagem/instagram.webp" class="img_login" alt="Login Image" ></a>
+	</nav>
+
+	
+</body>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    	 
+	<footer> 
+		Criado por MyOffice - 2024 
+	</footer>
+
+</html>

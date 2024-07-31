@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('imagem/sala_fundo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh; /* Garante que o body ocupa pelo menos toda a altura da viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1; /* Faz com que o container ocupe todo o espaço restante */
+  padding-bottom: 60px; /* Espaço extra para o footer não sobrepor o conteúdo */
+  min-height: calc(100vh - 100px); /* Ajuste conforme necessário para garantir que o footer não sobreponha o conteúdo */
+}
+
+
+footer {
+  width: 100%;
+  background-color: transparent; /* Cor de fundo do footer */
+  padding: 10px 0; /* Espaçamento interno do footer */
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Index.html */
+
+.cabecalho_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  
+    padding: 10px 20px;
+}
+
+.entrar {
+    position: absolute;
+    right: 90px; 
+}
+
+.nav {
+    margin-top: 20px;
+    color: #58af9b;
+}
+
+.nav-item {
+    margin: 0 10px;
+    
+}
+
+.nav-link {
+    color: #58af9b; 
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: #7f8c8d;
+}
+
+.img_login{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+} 
+
+.carousel-container {
+    margin-bottom: 70px; /* Espaço entre o carrossel e o conteúdo seguinte */
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 100vh; /* Altura total da viewport */
+}
+.container-apresentacao {
+    max-width: 70vw; /* 80% da largura da viewport */
+    max-height: 20vh; /* 80% da altura da viewport */
+}
+
+.feature {
+    margin-bottom: 10px;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+.container-apresentacao h2 {
+  color: #7f8c8d;
+  font-weight: bold;
+}
+
+
+.container-apresentacao h3 {
+    color: #58af9b;
+    font-weight: bold;
+}
+
+.features p{
+   background-color:transparent;
+   text-align: left;
+   color: black;
+   
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30vh;
+}
+
+#sobre{
+    background-color: #58af9b;
+    opacity: 0.8;
+    border-radius: 15px;
+    
+}
+
+.sobre_p{
+    color: black;
+    text-align: center;
+    
+}
+
+/* Login.html */
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.container_login {
+  flex: 1; /* Faz com que o container ocupe todo o espaço vertical restante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px; /* Espaço entre o header e o container */
+}
+
+  
+.card {
+  max-width: 400px; /* Largura máxima do conteúdo do formulário */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #272262
+  }
+  
+  .label-float input{
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #58af9b;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    
+  }
+  
+  .label-float{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .label-float input:focus{
+    border-bottom: 2px solid #58af9b;
+  }
+  
+  .label-float label{
+    color: #58af9b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: #58af9b
+  }
+  
+  button{
+    background-color: transparent;
+    border-color: #58af9b;
+    color: #58af9b;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+  }
+  
+  button:hover{
+    background-color: #58af9b;
+    color: #fff;
+  }
+  
+  .justify-center{
+    display: flex;
+    justify-content: center;
+  }
+  
+  hr{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+  }
+  
+  p{
+    color: #58af9b;
+    font-size: 14pt;
+    text-align: center;
+  }
+  
+  a{
+    color: #58af9b;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    cursor: poi;
+  }
+  
+  a:hover{
+    color: #58af9b;
+  }
+  
+  .fa-eye, .fa-eye-slash {
+    color: #58af9b;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #msgError {
+    color: red;
+    margin-bottom: 10px;
+    font-size: bold;
+}
+
+/* cadastro.html*/
+
+.container_login {
+  padding: 20px;
+  margin: 0 auto; /* Centraliza o container na página, se necessário */
+  max-width: 400px; /* Define a largura máxima do container */
+}
+  
+  .card {
+    background-color: #ffffff80;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #58af9b;
+    width: 400px;
+  }
+  
+  h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #58af9b
+  }
+
+
+  
+  .label-float input{
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #58af9b;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    
+  }
+  
+  .label-float{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .label-float input:focus{
+    border-bottom: 2px solid #58af9b;
+  }
+  
+  .label-float label{
+    color: #58af9b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: #58af9b
+  }
+  
+  button{
+    background-color: transparent;
+    border-color: #58af9b;
+    color: #58af9b;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+  }
+  
+  button:hover{
+    background-color: #58af9b;
+    color: #fff;
+  }
+  
+  .justify-center{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fa-eye{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: #58af9b;
+  }
+  
+
+  
+
+
+  /* fim css cadaastro */
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .card {
+    background-color: #ffffff80;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #58af9b
+  }
+  
+  h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #58af9b
+  }
+  
+  .label-float input{
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #58af9b;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    
+  }
+  
+  .label-float{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .label-float input:focus{
+    border-bottom: 2px solid #58af9b;
+  }
+  
+  .label-float label{
+    color: #58af9b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: #58af9b;
+  }
+  
+  button{
+    background-color: transparent;
+    border-color: #58af9b;
+    color: #58af9b;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+  }
+  
+  button:hover{
+    background-color: #58af9b;
+    color: #fff;
+  }
+  
+  .justify-center{
+    display: flex;
+    justify-content: center;
+  }
+  
+  hr{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+  }
+  
+  p{
+    color: black;
+    font-size: 14pt;
+    text-align: center;
+  }
+  
+  a{
+    color: #58af9b;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    cursor: pointer;
+  }
+  
+  a:hover{
+    color: #7f8c8d;
+  }
+  
+  .fa-eye{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: #272262;
+  }
+  
+
+
+.label_input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    border-radius: 2px;
+}
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+
+
+  /* Estilos simples para a página */
+
+header {
+    background-color: #58af9b;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+.container-apresentacao {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+.introducao{
+    color: #58af9b; 
+}
+
+.btn-png-apresentacao {
+    padding: 3px 30px;
+  background-color: #58af9b;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+    margin-bottom: 20px;
+}
+.btn-png-apresentacao:hover{
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color: #58af9b;
+    cursor: pointer;
+    
+}
+
+.dropdown-item{
+    cursor: pointer;
+    padding-left: 10px;  
+}
+
+ .carousel-item img {
+        width: 100%;
+        height: 500px; /* Altura desejada das imagens */
+        object-fit: cover;
+    }
+
+/* parte de cadastro de salas */
+
+    .containerCadastro {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 370px;
+       
+    }
+
+    .containerCadastro h2 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .containerCadastro label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .containerCadastro input[type="text"],
+    .containerCadastro input[type="date"],
+    .containerCadastro input[type="file"],
+    .containerCadastro button {
+        width: calc(100% - 12px); /* Ajuste para o padding */
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .containerCadastro input[type="file"] {
+        padding: 4px;
+    }
+
+    .containerCadastro button {
+        background-color: #58af9b;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .containerCadastro button:hover {
+        background-color: #58af9b;
+        opacity: 0.7;
+    }
+
+    .estados {
+        display: block; /* Garante que o label ocupe uma linha inteira */
+        margin-bottom: 8px; /* Espaçamento inferior entre o label e o select */
+        font-weight: bold; /* Fonte em negrito para destacar */
+    }
+    #estados {
+        width: 100%; /* Ocupa toda a largura do seu contêiner */
+        padding: 8px; /* Espaçamento interno */
+        font-size: 16px; /* Tamanho da fonte */
+        border: 1px solid #ccc; /* Borda cinza */
+        border-radius: 4px; /* Cantos arredondados */
+    }
+
+    #estados option {
+        padding: 8px; /* Espaçamento interno */
+    }
+    
+    /* Estilo quando o select está focado */
+    #estados:focus {
+        outline: none; /* Remove o contorno padrão ao focar */
+        border-color: #66afe9; /* Cor da borda quando focado */
+        box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Sombra ao redor */
+    }
+
+
+
+/* Estilo para o modal */
+.modal {
+    display: none; /* Ocultar modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* fundo semi-transparente */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    width: 70%;
+    max-width: 400px; /* Define uma largura máxima para o modal */
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -35%);
+  }
+  
+  /* Estilo para o botão de fechar */
+  .close {
+    color: #ff0000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/** inicio modal de consulta abaixo/
+
+/* Estilos para o modal de consulta */
+/* Estilos para o modal de consulta */
+.modal-consulta {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido */
+    overflow: auto;
+  }
+  
+  .modal-content-consulta {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .modal-content-consulta h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content-consulta label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content-consulta input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .modal-content-consulta button {
+    background-color: #58af9b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  
+  .modal-content-consulta button:hover {
+    background-color: #58af9b;
+    opacity: 0.7;
+  }
+  
+  .closeConsulta {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .closeConsulta:hover,
+  .closeConsulta:focus {
+    color: black;
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="login-body">
+    <header class="cabecalho">
+        <img onclick="telaInicio()" class="img" src="Imagem/logo.png" width="200" height="80">
+    </header>
+
+    <div class="container_login">
+        <div class="card">
+            <h1>Entrar</h1>
+            <div id="msgError"></div>
+            <div class="label-float">
+                <input type="text" id="email_login" placeholder="" required />
+                <label for="email_login">E-mail</label>
+            </div>
+
+            <div class="label-float" style="position: relative;">
+                <input type="password" id="senha_login" placeholder="" required />
+                <label for="senha_login">Senha</label>
+                <i id="verSenha" class="fa fa-eye" aria-hidden="true" onclick="toggleSenha('senha_login', 'verSenha')"></i>
+            </div>
+
+            <div class="justify-center">
+                <button onclick="logado()">Entrar</button>
+            </div>
+
+            <div class="justify-center">
+                <hr />
+            </div>
+
+            <p>
+                Não tem uma conta?
+                <a class="a" onclick="telaCadastro()">Cadastre-se</a>
+            </p>
+            <p>
+                Retornar ao
+                <a class="a" onclick="telaInicio()">Início</a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Criado por MyOffice - 2024
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

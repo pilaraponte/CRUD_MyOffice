@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOffice</title>
+</head>
+<body>
+<header class="cabecalho">
+  <img onclick="telaInicio()" class="img" src="Imagem/logo.png" width="200" height="80">
+  <div class="entrar" aria-labelledby="dropdownMenuButton">
+      <img src="Imagem/login.png" class="img_login" alt="Login Image" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <!-- Chamado do Modal -->
+          <a class="dropdown-item" href="#" id="abrirModal">Opções</a>
+          <a class="dropdown-item" href="#" onclick="exibeSalas()">Salas cadastradas</a>
+          <a class="dropdown-item" href="#" id="abrirModalConsulta">Pesquisar salas</a>
+          <a class="dropdown-item" href="#" onclick="sair()">Sair</a>
+      </div>
+  </div>
+</header> <br>
+
+<!-- Botão para abrir o modal <button >Abrir Modal</button> -->
+
+<div id="modalConsulta" class="modal-consulta">
+  <div class="modal-content-consulta">
+    <span class="closeConsulta">&times;</span>
+    <h2>Pesquisar Sala</h2>
+    <label for="pesquisa">Informe o estado, cidade, bairro ou cep:</label>
+    <input type="text" id="pesquisa" placeholder="Digite aqui..." required>
+    <button onclick="buscarSala()">Buscar</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <!-- Conteúdo do modal (seu formulário) -->
+    <span class="close">&times;</span>
+    <div class="containerCadastro">
+      <h2>Opções</h2>
+      <label for="id_cadastro_salas">Código da sala:</label>
+      <input placeholder="Cadastre ou consulte uma sala" type="text" id="id_cadastro_salas" required>
+      <br>
+      <label for="cep_cadastro_salas">Cep:</label>
+      <input placeholder="Digite o cep " type="text" id="cep_cadastro_salas" required>
+      <br>
+      <label for="estados_cadastro_salas">Estado:</label>
+      <select class="estados" id="estados_cadastro_salas" required>
+        <option value="">Selecione um estado</option>
+        <option value="AC">Acre</option>
+		<option value="AL">Alagoas</option>
+		<option value="AP">Amapá</option>
+		<option value="AM">Amazonas</option>
+		<option value="BA">Bahia</option>
+		<option value="CE">Ceará</option>
+		<option value="DF">Distrito Federal</option>
+		<option value="ES">Espírito Santo</option>
+		<option value="GO">Goiás</option>
+		<option value="MA">Maranhão</option>
+		<option value="MT">Mato Grosso</option>
+		<option value="MS">Mato Grosso do Sul</option>
+		<option value="MG">Minas Gerais</option>
+		<option value="PA">Pará</option>
+		<option value="PB">Paraíba</option>
+		<option value="PR">Paraná</option>
+		<option value="PE">Pernambuco</option>
+		<option value="PI">Piauí</option>
+		<option value="RJ">Rio de Janeiro</option>
+		<option value="RN">Rio Grande do Norte</option>
+		<option value="RS">Rio Grande do Sul</option>
+		<option value="RO">Rondônia</option>
+		<option value="RR">Roraima</option>
+		<option value="SC">Santa Catarina</option>
+		<option value="SP">São Paulo</option>
+		<option value="SE">Sergipe</option>
+		<option value="TO">Tocantins</option>
+      </select>
+      <label for="cidade_cadastro_salas">Cidade:</label>
+      <input placeholder="Informe a cidade " type="text" id="cidade_cadastro_salas" required>
+      <label for="bairro_cadastro_salas">Bairro:</label>
+      <input placeholder="Informe o bairro" type="text" id="bairro_cadastro_salas" required>
+      <br>
+      <label for="data_cadastro_salas">Data de publicação:</label>
+      <input type="date" id="data_cadastro_salas" required>
+      <br>
+      <label for="preco_cadastro_salas">Preço:</label>
+      <input placeholder="Digite o preço da sala " type="number" id="preco_cadastro_salas" required>
+      <br>
+      <label for="capacidade_cadastro_salas">Capacidade da sala:</label>
+      <input placeholder="Capacidade da sala " type="number" id="capacidade_cadastro_salas" required>
+      <br>
+      <label for="descricao_cadastro_salas">Descrição:</label>
+      <input placeholder="Descrição da sala" type="text" id="descricao_cadastro_salas" required>
+      <br>
+      <!--Vou alterar aqui-->
+      <label for="imagens_salas">Imagens:</label>
+      <input placeholder="Informe a imagem " type="text" id="imagens_salas">
+      <label for="contato">Contato:</label>
+      <input placeholder="Informe seu telefone" type="tel" id="contato">
+      <br><br>
+      <button id="cadastrarSala" onclick="cadastrarSala()">Cadastrar</button>
+      <button id="consultarSala" onclick="consultarSala()">Buscar sala</button>
+      <button id="atualizarSala" onclick="AtualizarDadosSala()">Atualizar sala</button>
+      
+
+      <!-- Botão para abrir o modal -->
+      <button id="excluirSala" onclick="openModal()">Excluir sala</button>
+
+        <!-- O Modal -->
+        <div id="Modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>Tem certeza de que deseja excluir esta sala?</p>
+                <div class="button-container">
+                    <button onclick="excluirSala()">Excluir</button>
+                    <button onclick="closeModal()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+ <!-- Mostrar salas-->
+<div style="text-align: center;" class="container-exibe-Sala">	
+	<p id="lista_salas"></p>
+ </div>
+ <!-- Mostrar salas-->
+  <!--Mostrta as salas pesquisadas-->
+   <div  style="text-align: center;" class="container-exibe-Sala" id="resultado"></div>
+
+
+
+
+<body>
+
+  <nav style="text-align: center;">
+		<a target="_blank" 
+		   href="https://wa.me"><img src="imagem/wtss.png" class="img_login" alt="Login Image" ></a>
+		   
+		<a target="_blank" 	
+		   href="https://www.linkedin.com"><img src="imagem/Linkedin.webp" class="img_login" alt="Login Image" ></a></a>
+		   <a target="_blank"
+		href="https://www.instagram.com"><img src="imagem/instagram.webp" class="img_login" alt="Login Image" ></a>
+	</nav>
+  <footer class="footer">
+    Criado por MyOffice - 2024
+</footer>
+
+
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de cadastro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<header class="cabecalho">
+  <img onclick="telaInicio()" class="img" src="Imagem/logo.png" width="200" height="80">
+</header>
+<body>
+  <div class="container_login">
+    <div class="card">
+      <h1>Cadastrar</h1>
+      <div class="label-float">
+        <input type="text" id="nome" placeholder=" " required />
+        <label for="nome">Nome</label>
+      </div>
+      <div class="label-float">
+        <input type="email" id="email" placeholder=" " required />
+        <label for="email">E-mail</label>
+      </div>
+      <div class="label-float">
+        <input type="password" id="novaSenha" placeholder=" " required />
+        <label for="novaSenha">Senha</label>
+        <i id="toggleNovaSenha" class="fa fa-eye" onclick="toggleSenha('novaSenha', 'toggleNovaSenha')" aria-hidden="true"></i>
+      </div>
+      <div class="label-float">
+        <input type="password" id="repitaSenha" placeholder=" " required />
+        <label for="repitaSenha">Confirmar Senha</label>
+        <i id="toggleRepitaSenha" class="fa fa-eye" onclick="toggleSenha('repitaSenha', 'toggleRepitaSenha')" aria-hidden="true"></i>
+      </div>
+      <div class="justify-center">
+        <button onclick="cadastrar()">Cadastrar</button>
+      </div>
+      <p>
+        Retorne à tela de
+        <a class="a" onclick="telaLogin()">Login</a>
+      </p>
+      <p>
+        Retornar ao
+        <a class="a" onclick="telaInicio()">Início</a>
+      </p>
+    </div>
+  </div>
+  <footer>
+    Criado por MyOffice - 2024
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
